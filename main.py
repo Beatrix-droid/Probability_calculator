@@ -16,7 +16,8 @@ class Hat:
         self.contents = []
         ball_colour_freq = kwargs.values()
         self.total_balls = sum(ball_colour_freq)
-        for key in kwargs.keys():
+        for key, value in kwargs.items(): 
+          for i in range(value):
             self.contents.append(key)
 
 
