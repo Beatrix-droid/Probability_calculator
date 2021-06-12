@@ -1,7 +1,7 @@
-""" This is a probability calculator. It has a Hat class that takes a number of arguments that
- specify the number of balls of each color that are in the hat, and a draw method that randomly
- draws a number of balls WITHOUT REPLACEMENT.
-There is then an experiment class that returns the probability of drawing balls ofa  specific color
+""" This is a probability calculator. There is a Hat class with an __init__ method that takes a number of arguments that
+ specify the number of balls of each colour that are in the hat. There is also a draw method that randomly
+ draws a number of balls out of the hat WITHOUT REPLACEMENT.
+There is then an experiment function that returns the probability of drawing balls of a  specific colour
 if we repeat the experiment a specified number of times"""
 
 import random
@@ -9,7 +9,7 @@ import copy
 
 class Hat:
 
-    """ This clas defines the Hat for whoch balls can be placed in, and a method to draw them """
+    """ This class defines the Hat for which balls can be placed in, and a method to draw them """
 
     def __init__(self, **kwargs):
         self.hat = kwargs
@@ -23,8 +23,8 @@ class Hat:
 
     def draw(self, balls_to_be_drawn):
 
-        """ This is function that randomly draws a specified number of balls
-        (called balls_to_be_drawn) from the hat."""
+        """ This is a function that randomly draws a specified number of balls
+        (called balls_to_be_drawn) out of the hat."""
 
         self.balls_to_be_drawn = balls_to_be_drawn
         drawn = dict.fromkeys(self.hat.keys(), 0)
@@ -37,8 +37,8 @@ class Hat:
         return cat
 
 def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
-
-    """ a function that returns the probability of drawing certain types of balls over
+#must usee copy hat in here
+    """ a function that returns the probability of drawing certain colours of balls out of the hat over
     n experiments"""
 
     match = 0
