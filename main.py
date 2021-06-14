@@ -29,7 +29,7 @@ class Hat:
         self.balls_to_be_drawn = balls_to_be_drawn
         for i in range(balls_to_be_drawn):
             # drawing a random ball
-            ball_drawn = random.choice(list(self.hat))
+            ball_drawn = random.choice(self.contents)
             self.contents.remove(ball_drawn)
             drew_balls.append(ball_drawn)
             drew_balls.sort()
