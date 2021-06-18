@@ -51,7 +51,7 @@ def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
                     success = True
                 else:
                     success = False
-            if success:
+        if success:
                 match += 1
     probability = match / num_experiments
 
